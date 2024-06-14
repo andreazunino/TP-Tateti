@@ -3,7 +3,7 @@ let currentPlayer = "X";
 let cells = document.querySelectorAll("td");
 let currentCell;
 
-// Reemplaza {project_id} con el ID de tu proyecto
+// url de la API del proyecto en mockapi
 fetch('https://666c325d49dbc5d7145d127c.mockapi.io/preguntas')
     .then(response => response.json())
     .then(data => {
