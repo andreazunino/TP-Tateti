@@ -9,20 +9,34 @@ h1 {
     color: #007bff;
 }
 
+.carousel-container {
+    max-width: 600px; /* Ajusta el ancho del carrusel según tu preferencia */
+    margin: 0 auto;
+}
+
+.carousel-item img {
+    max-height: 300px; /* Ajusta la altura del carrusel según tu preferencia */
+    object-fit: cover; /* Asegura que las imágenes mantengan su proporción */
+}
+
 .board {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: auto;
+    width: 100%;
+    max-width: 450px;
 }
 
 table {
-    margin: auto;
-    width: 450px;
-    height: 450px;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 td {
-    width: 150px;
-    height: 150px;
+    width: 33.33%;
+    padding-top: 33.33%; /* Mantiene la proporción cuadrada */
+    position: relative;
     border: 2px solid #007bff;
     font-weight: 600;
     color: #007bff;
@@ -30,6 +44,19 @@ td {
     vertical-align: middle;
     font-size: 2rem;
     cursor: pointer;
+}
+
+td::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%; /* Mantiene la proporción cuadrada */
+}
+
+td span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .modal-content {
