@@ -1,16 +1,17 @@
 let board = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "X";
-let cells = document.querySelectorAll("td");
+const cells = document.querySelectorAll("td");
 let currentCell;
 
-// url de la API del proyecto en mockapi
+// URL de la API del proyecto en mockapi
 fetch('https://666c325d49dbc5d7145d127c.mockapi.io/preguntas')
     .then(response => response.json())
     .then(data => {
         window.questions = data;
+        console.log('Preguntas obtenidas:', data); // Verifica que las preguntas se obtienen correctamente
     });
 
-cells.forEach((cell, index) => { 
+cells.forEach((cell, index) => {
     cell.addEventListener("click", () => handleClick(index));
 });
 
@@ -44,7 +45,7 @@ function checkAnswer(question, selected) {
         board[currentCell] = currentPlayer;
         cells[currentCell].textContent = currentPlayer;
         if (checkWin()) {
-            setTimeout(() => alert(`${currentPlayer} ganó!`), 100);
+            setTimeout(() => alert("¡Ganaste!"), 100);
         }
         currentPlayer = currentPlayer === "X" ? "O" : "X";
     } else {

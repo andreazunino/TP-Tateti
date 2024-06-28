@@ -1,7 +1,11 @@
 body {
-    background-color: #f8f9fa;
-    color: #343a40;
+    background-image: url('fondo.jpg'); /* Reemplaza la URL con la de tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #88929c;
     font-family: 'Arial', sans-serif;
+    min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la página */
 }
 
 h1 {
@@ -26,6 +30,9 @@ h1 {
     margin: auto;
     width: 100%;
     max-width: 450px;
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para el tablero */
+    padding: 10px;
+    border-radius: 10px;
 }
 
 table {
