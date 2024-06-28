@@ -1,11 +1,11 @@
 body {
-    background-image: url('fondo.jpg'); /* Reemplaza la URL con la de tu imagen de fondo */
+    background-image: url('fondo.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #88929c;
     font-family: 'Arial', sans-serif;
-    min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la página */
+    min-height: 100vh; 
 }
 
 h1 {
@@ -14,15 +14,23 @@ h1 {
 }
 
 .carousel-container {
-    max-width: 600px; /* Ajusta el ancho del carrusel según tu preferencia */
+    max-width: 600px; /* ancho del carrusel */
     margin: 0 auto;
 }
 
 .carousel-item img {
-    max-height: 300px; /* Ajusta la altura del carrusel según tu preferencia */
-    object-fit: cover; /* Asegura que las imágenes mantengan su proporción */
+    max-height: 300px; /* altura carrrusel */
+    object-fit: cover; /* proporcion de imagenes */
 }
-
+.carousel-inner img {
+    filter: blur(1px); /* Desenfoque de las imagenes del carrusel */
+}
+.carousel-caption h5,
+.carousel-caption p {
+    color: #23015a;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
 .board {
     display: flex;
     justify-content: center;
@@ -30,7 +38,7 @@ h1 {
     margin: auto;
     width: 100%;
     max-width: 450px;
-    background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para el tablero */
+    background: rgba(255, 255, 255, 0.8); /* fondo blanco semitransparente para el tablero */
     padding: 10px;
     border-radius: 10px;
 }
@@ -42,7 +50,7 @@ table {
 
 td {
     width: 33.33%;
-    padding-top: 33.33%; /* Mantiene la proporción cuadrada */
+    padding-top: 33.33%; /* mantiene la proporcion del tateti */
     position: relative;
     border: 2px solid #007bff;
     font-weight: 600;
@@ -56,7 +64,7 @@ td {
 td::after {
     content: '';
     display: block;
-    padding-bottom: 100%; /* Mantiene la proporción cuadrada */
+    padding-bottom: 100%; /* mantiene proporcion del tateti */
 }
 
 td span {
