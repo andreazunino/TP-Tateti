@@ -31,7 +31,7 @@ h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
 }
-.board {
+.board { /*tablero*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,12 +43,12 @@ h1 {
     border-radius: 10px;
 }
 
-table {
+table { /*hace que la tabla ocupe todo el ancho disponible*/
     width: 100%;
     border-collapse: collapse;
 }
 
-td {
+td { /*estilos de las celdas*/
     width: 33.33%;
     padding-top: 33.33%; /* mantiene la proporcion del tateti */
     position: relative;
@@ -61,13 +61,13 @@ td {
     cursor: pointer;
 }
 
-td::after {
+td::after { 
     content: '';
     display: block;
-    padding-bottom: 100%; /* mantiene proporcion del tateti */
+    padding-bottom: 100%; /* mantiene proporcion del tateti, de las celdas */
 }
 
-td span {
+td span { /*centra el contenido del span dentro de la celda*/
     position: absolute;
     top: 50%;
     left: 50%;
@@ -86,10 +86,10 @@ td span {
     border-top-right-radius: 10px;
 }
 
-.list-group-item {
+.list-group-item { /*cambia el cursor a un puntero para los elementos de la lista de grupo.*/
     cursor: pointer;
 }
 
-.list-group-item:hover {
+.list-group-item:hover { /*cambia el fondo de los elementos de la lista de grupo cuando se pasa mouse.*/
     background-color: #f8f9fa;
 }
